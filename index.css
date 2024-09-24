@@ -1,0 +1,176 @@
+body {
+    background-image: url(img/background-image.jpg);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    object-fit: fill;
+    background-color: #7b7b7b;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+.profil-wrap {
+    position: relative;
+    background-color: #2ab8e8;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 900px;
+    color: white;
+    overflow: hidden;
+}
+.profil-wrap::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('img/abstrack.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode:multiply;
+    opacity: 0.5;
+    z-index: 0;
+}
+.profil-biodata {
+    margin: 20px 0;
+    text-align: center;
+    border-radius: 45px;
+    font-weight: 600;
+    background-color: rgba(88, 86, 89, 0.8);
+    padding: 15px;
+    font-size: 2rem;
+    position: relative;
+    z-index: 1;
+}
+.content-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+}
+.biodata-wrap {
+    flex: 1 1 100px;
+    align-items: center;
+    justify-content: center;
+    
+}
+.image-wrap {
+    flex: 1 1 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.image-profil {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border: 5px solid white;
+    transform: rotate(8deg);
+    transition: transform 0.3s ease;
+    align-items: center;
+    justify-content: center;
+}
+.image-profil:hover {
+    transform: rotate(0deg);
+}
+
+.icon-medsos {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.icon {
+    flex: 0 0 auto;
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon:hover {
+    transform: scale(1.3);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.icon img {
+    max-width: 100%;
+    height: auto;
+}
+.summary {
+    border: 1px solid white;
+    text-align: justify;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+
+}
+.blank-spot {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+.blank-spot div {
+    height: 30px;
+    width: 30px;
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: 50%;
+    border: 2px solid white;
+}
+@media (max-width: 800px) {
+    .content-wrap {
+        flex-direction: column;
+    }
+    .image-wrap .biodata-wrap {
+        flex: 1  100%;
+        flex-direction: column;
+        
+
+
+    }
+    .image-wrap {
+    margin: auto;
+    }
+    .image-profil {
+      margin: auto;
+      margin-left: auto;
+        
+    }
+}
+.biodata-wrap {
+    flex: 1 1 300px;
+}
+.biodata-item {
+    display: flex;
+    margin-bottom: 10px;
+}
+.biodata-label {
+    flex: 0 0 100px; 
+    text-align: left;
+
+    padding-right: 10px;
+    font-weight: bold;
+}
+.biodata-value {
+    flex: 1;
+}
